@@ -1,0 +1,51 @@
+.search_bar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 64px;
+  padding: 12px 24px;
+  color: #fff;
+  background-color: #3f51b5;
+  z-index: 1;
+}
+
+.search_form {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  background-color: #fff;
+  border-radius: 3px;
+  overflow: hidden;
+}
+.search_form input {
+  display: inline-block;
+  width: 100%;
+  font: inherit;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  padding: 5px 10px;
+  border-right: 1px solid gray;
+}
+.search_form button {
+  background: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  width: -moz-max-content;
+  width: max-content;
+  height: 100%;
+  padding: 5px;
+  border: unset;
+  outline: unset;
+  cursor: pointer;
+}
+.search_form button svg {
+  height: 30px;
+  width: 30px;
+}/*# sourceMappingURL=SearchBar.module.css.map */
