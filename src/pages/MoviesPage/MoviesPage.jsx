@@ -30,11 +30,11 @@ const MoviesPage = () => {
       }
     };
     query && fetchData();
-  }, [query, params]);
+  }, [query]);
 
   const handleSearch = async (searchQuery) => {
-    setQuery(searchQuery);
     params.set("query", searchQuery);
+    setQuery(searchQuery);
     setParams(params);
   };
 

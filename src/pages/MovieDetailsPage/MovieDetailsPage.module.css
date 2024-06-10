@@ -2,7 +2,35 @@
   display: flex;
   gap: 10px;
 }
+.details_page img {
+  width: 250px;
+}
 
 .addition_information {
   margin-top: 20px;
+}
+.addition_information h4 {
+  font-size: 20px;
+}
+.addition_information nav {
+  display: flex;
+  gap: 20px;
+}
+.addition_information nav > a {
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.link {
+  color: black;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.active {
+  color: rgb(71, 114, 255);
+  font-weight: 700;
 }/*# sourceMappingURL=MovieDetailsPage.module.css.map */

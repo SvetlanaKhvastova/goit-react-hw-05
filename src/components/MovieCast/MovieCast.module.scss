@@ -1,0 +1,27 @@
+.movie_cast_list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 20px 0;
+  padding: 0;
+  li {
+    width: calc((100% - 100px) / 6);
+    list-style: none;
+    h4 {
+      font-size: 18px;
+      text-align: center;
+      margin: 10px 0;
+    }
+    p {
+      margin: 0;
+      font-size: 10px;
+      text-align: center;
+    }
+    img {
+      max-height: 228px;
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+}
