@@ -8,19 +8,18 @@ import { useSearchParams } from "react-router-dom";
 
 const MoviesPage = () => {
   const [movieSearch, setMovieSearch] = useState([]);
-  const [query, setQuery] = useState("");
   const [loader, setLoader] = useState(false);
   const [error, setError] = useState(false);
 
   const [params, setParams] = useSearchParams();
-  console.log(params.get("query"), `params`);
+  // console.log(params.get("query"), `params`);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         setError(false);
         setLoader(true);
-        const { data } = await fetchSearchMovie(query);
+        const { data } = await fetchSearchMovie(params.get("query"));
         setMovieSearch(data.results);
         data.total_results === 0 && setError("No results found.");
       } catch (error) {
@@ -29,12 +28,11 @@ const MoviesPage = () => {
         setLoader(false);
       }
     };
-    query && fetchData();
-  }, [query]);
+    params.get("query") && fetchData();
+  }, [params]);
 
   const handleSearch = async (searchQuery) => {
     params.set("query", searchQuery);
-    setQuery(searchQuery);
     setParams(params);
   };
 
